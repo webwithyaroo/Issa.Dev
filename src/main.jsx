@@ -7,10 +7,8 @@ import Footer from "./layout/footer.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    {/* <ReactLenis> */}
     <Header />
     <App />
     <Footer />
-    {/* </ReactLenis> */}
   </StrictMode>
 );
