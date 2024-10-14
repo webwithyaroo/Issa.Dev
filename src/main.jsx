@@ -6,9 +6,10 @@ import Header from "./layout/header.jsx";
 import Footer from "./layout/footer.jsx";
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
+  <>
     <Header />
     <App />
     <Footer />
-  </StrictMode>
+  </>
+
 );
