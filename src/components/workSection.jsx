@@ -8,6 +8,7 @@ import {
   easeOut,
 } from "framer-motion";
 import { FaArrowUp } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const WorkSection = () => {
   const [windowSize, setWindowSize] = useState(window.innerWidth);
   const lageScreen = windowSize >= 700;
@@ -178,6 +179,7 @@ function MyProjects() {
             whileInView={{ opacity: 1, translateY: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.3, ease: "easeOut" }}
+            transformOrigin="top center"
             onClick={() => handleAnimation(1)}
             className="border-b-[1px] border-white text-start relative group isolate overflow-hidden"
           >
@@ -209,12 +211,15 @@ function MyProjects() {
                       Teamed up with Sparkr to improve a website, prioritizing
                       smooth animations and quality collaboration.
                     </p>
-                    <div className="px-6 py-3 my-5 bg-white w-fit rounded-full">
+                    <Link
+                      to={"https://sparkrdigitals.com/"}
+                      className="flex items-center px-6 py-3 my-5 bg-white w-fit rounded-full"
+                    >
                       <AnimatedLink
                         title={"See Website"}
                         className={"text-black"}
                       />
-                    </div>
+                    </Link>
                     <ul className="blg">
                       <li className="list-decimal list-inside">
                         Frontend Development
@@ -225,17 +230,41 @@ function MyProjects() {
                     </ul>
 
                     <div className="flex flex-wrap mx-auto max-w-[700px] items-center  mt-10 justify-center">
-                      <img
+                      <motion.img
+                        initial={{ filter: "blur(5px)" }}
+                        whileInView={{ filter: "blur(0px)", opacity: 1 }}
+                        transition={{
+                          ease: "easeInOut",
+                          duration: 0.3,
+                          delay: 0.3,
+                        }}
+                        viewport={{ once: true }}
                         className="object-contain "
                         src="/image/spk_1.png"
                         alt="A website home page"
                       />
-                      <img
+                      <motion.img
+                        initial={{ filter: "blur(5px)" }}
+                        whileInView={{ filter: "blur(0px)", opacity: 1 }}
+                        transition={{
+                          ease: "easeInOut",
+                          duration: 0.3,
+                          delay: 0.3,
+                        }}
+                        viewport={{ once: true }}
                         className="object-contain "
                         src="/image/spk_2.png"
                         alt="A website testimony"
                       />
-                      <img
+                      <motion.img
+                        initial={{ filter: "blur(5px)" }}
+                        whileInView={{ filter: "blur(0px)", opacity: 1 }}
+                        transition={{
+                          ease: "easeInOut",
+                          duration: 0.3,
+                          delay: 0.3,
+                        }}
+                        viewport={{ once: true }}
                         className="object-contain "
                         src="/image/spk_3.png"
                         alt="A website footer"
@@ -253,6 +282,7 @@ function MyProjects() {
             whileInView={{ opacity: 1, translateY: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.3, delay: 0.3, ease: "easeOut" }}
+            transformOrigin="top center"
             onClick={() => handleAnimation(2)}
             className="text-start border-b-[1px] border-white relative group isolate overflow-hidden"
           >
@@ -286,12 +316,15 @@ function MyProjects() {
                       SANAM, an Arab-based project, where I crafted an engaging
                       and visually appealing section.
                     </p>
-                    <div className="px-6 py-3 my-5 bg-white w-fit rounded-full">
+                    <Link
+                      to={"https://sanaam.sa/en"}
+                      className="px-6 py-3 my-5 flex justify-center items-center bg-white w-fit rounded-full"
+                    >
                       <AnimatedLink
                         title={"See Website"}
                         className={"text-black"}
                       />
-                    </div>
+                    </Link>
                     <ul className="blg">
                       <li className="list-decimal list-inside">
                         Responsive Design
@@ -308,17 +341,41 @@ function MyProjects() {
                     </ul>
 
                     <div className="flex flex-wrap gap-2 mt-10 max-w-[700px] mx-auto justify-center">
-                      <img
+                      <motion.img
+                        initial={{ filter: "blur(5px)" }}
+                        whileInView={{ filter: "blur(0px)", opacity: 1 }}
+                        transition={{
+                          ease: "easeInOut",
+                          duration: 0.3,
+                          delay: 0.3,
+                        }}
+                        viewport={{ once: true }}
                         className="object-contain"
                         src="/image/sanam_1.png"
                         alt="A website home page"
                       />
-                      <img
+                      <motion.img
+                        initial={{ filter: "blur(5px)" }}
+                        whileInView={{ filter: "blur(0px)", opacity: 1 }}
+                        transition={{
+                          ease: "easeInOut",
+                          duration: 0.3,
+                          delay: 0.3,
+                        }}
+                        viewport={{ once: true }}
                         className="object-contain"
                         src="/image/sanam_2.png"
                         alt="A website testimony"
                       />
-                      <img
+                      <motion.img
+                        initial={{ filter: "blur(5px)" }}
+                        whileInView={{ filter: "blur(0px)", opacity: 1 }}
+                        transition={{
+                          ease: "easeInOut",
+                          duration: 0.3,
+                          delay: 0.3,
+                        }}
+                        viewport={{ once: true }}
                         className="object-contain"
                         src="/image/sanam_3.png"
                         alt="A website footer"
@@ -336,6 +393,7 @@ function MyProjects() {
             whileInView={{ opacity: 1, translateY: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.3, delay: 0.5, ease: "easeOut" }}
+            transformOrigin="top center"
             onClick={() => handleAnimation(3)}
             className="text-start border-b-[1px] border-white relative group isolate overflow-hidden"
           >
@@ -369,12 +427,17 @@ function MyProjects() {
                       an intuitive shopping experience for users across all
                       devices.
                     </p>
-                    <div className="px-6 py-3 my-5 bg-white w-fit rounded-full">
+                    <Link
+                      to={
+                        "https://webwithyaroo.github.io/homaker_project/#/products"
+                      }
+                      className="px-6 py-3 my-5 flex items-center bg-white w-fit rounded-full"
+                    >
                       <AnimatedLink
                         title={"See Website"}
                         className={"text-black"}
                       />
-                    </div>
+                    </Link>
                     <ul className="blg">
                       <li className="list-decimal list-inside">
                         Ecommerce API Integration
@@ -388,17 +451,41 @@ function MyProjects() {
                     </ul>
 
                     <div className="flex flex-wrap gap-2 mt-10 max-w-[700px] mx-auto justify-center">
-                      <img
+                      <motion.img
+                        initial={{ filter: "blur(5px)" }}
+                        whileInView={{ filter: "blur(0px)", opacity: 1 }}
+                        transition={{
+                          ease: "easeInOut",
+                          duration: 0.3,
+                          delay: 0.3,
+                        }}
+                        viewport={{ once: true }}
                         className="object-contain"
                         src="/image/home_1.png"
                         alt="A website home page"
                       />
-                      <img
+                      <motion.img
+                        initial={{ filter: "blur(5px)" }}
+                        whileInView={{ filter: "blur(0px)", opacity: 1 }}
+                        transition={{
+                          ease: "easeInOut",
+                          duration: 0.3,
+                          delay: 0.3,
+                        }}
+                        viewport={{ once: true }}
                         className="object-contain"
                         src="/image/home_2.png"
                         alt="A website testimony"
                       />
-                      <img
+                      <motion.img
+                        initial={{ filter: "blur(5px)" }}
+                        whileInView={{ filter: "blur(0px)", opacity: 1 }}
+                        transition={{
+                          ease: "easeInOut",
+                          duration: 0.3,
+                          delay: 0.3,
+                        }}
+                        viewport={{ once: true }}
                         className="object-contain"
                         src="/image/home_3.png"
                         alt="A website footer"
