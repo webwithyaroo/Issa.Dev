@@ -13,7 +13,7 @@ const Contact = () => {
           whileInView={{ translateY: 35, opacity: 1 }}
           transition={{ duration: 0.8, ease: easeInOut, delay: 1.52 }}
           viewport={{ once: true }}
-          className="lg:text-[240px] md:text-[190px] text-9xl max-[400px]:text-7xl text-white  leading-[0.8]
+          className="lg:text-[240px] md:text-[190px] text-8xl max-[400px]:text-4xl text-white  leading-[0.8]
           lg:translate-y-10"
         >
           Contact

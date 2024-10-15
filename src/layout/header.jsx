@@ -1,6 +1,6 @@
 import { FaArrowRight, FaBars } from "react-icons/fa";
 import AnimatedLink from "../components/animated-text";
-import { easeOut, motion, useMotionValue } from "framer-motion";
+import { easeOut, motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 
 const Header = () => {
@@ -27,7 +27,11 @@ const Header = () => {
   }
 
   const handleClickOutside = (event) => {
-    if (menuRef.current && !menuRef.current.contains(event.target)) {
+    if (
+      menuRef.current &&
+      !menuRef.current.contains(event.target) &&
+      !event.target.closest(".menu-button")
+    ) {
       setOpened(false);
     }
   };
@@ -81,7 +85,7 @@ const Header = () => {
           </motion.h1>
         </div>
       </motion.div>
-      <div className="container z-50 py-4 fixed top-0 left-0 right-0  flex items-center justify-between">
+      <div className="container  z-50 py-4 fixed top-0 left-0 right-0  flex items-center justify-between">
         <a
           href="/"
           className=" flex  justify-center items-center   relative z-50 font-bold  text-xl md:text-xl lg:text-2xl"
@@ -91,7 +95,7 @@ const Header = () => {
               initial={{ translateX: 40, opacity: 0 }}
               whileInView={{ translateX: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 1.2, ease: "easeOut" }}
-              className={` w-fit pr-2  ${
+              className={` w-fit pr-2 mix-blend-difference  ${
                 isAboutPage ? "text-black" : "text-white"
               } `}
             >
@@ -112,7 +116,21 @@ const Header = () => {
           </div>
         </a>
         <div className="flex items-center gap-x-10  blg">
-          <AnimatedBar handleOpenFunction={handleOpenFunction} />
+          <motion.button
+            onClick={handleOpenFunction}
+            className=" menu-button rounded-full group  border-gray  z-50 size-12 lg:size-20 flex items-center justify-center flex-col bg-blue-500 transition-all duration-500 ease-in-out"
+          >
+            <img
+              src="menu.svg"
+              alt=""
+              className="w-6 group-hover:translate-y-1  transition-all duration-100 ease-out group-hover:opacity-0  "
+            />
+            <img
+              src="stroke.svg"
+              alt=""
+              className="w-6 group-hover:h-[2px] bg-white opacity-0 group-hover:-translate-y-1 group-hover:opacity-100 transition-all duration-300 ease-out"
+            />
+          </motion.button>
 
           <motion.div
             ref={menuRef}
@@ -278,23 +296,3 @@ const Header = () => {
 };
 
 export default Header;
-
-function AnimatedBar({ handleOpenFunction }) {
-  return (
-    <motion.button
-      onClick={handleOpenFunction}
-      className=" rounded-full group  border-gray  z-50 size-12 lg:size-20 flex items-center justify-center flex-col bg-blue-500 transition-all duration-500 ease-in-out"
-    >
-      <img
-        src="menu.svg"
-        alt=""
-        className="w-6 group-hover:translate-y-1  transition-all duration-100 ease-out group-hover:opacity-0  "
-      />
-      <img
-        src="stroke.svg"
-        alt=""
-        className="w-6 group-hover:h-[2px] bg-white opacity-0 group-hover:-translate-y-1 group-hover:opacity-100 transition-all duration-300 ease-out"
-      />
-    </motion.button>
-  );
-}

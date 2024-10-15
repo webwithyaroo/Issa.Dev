@@ -13,7 +13,7 @@ const NotFound = () => {
         404
       </motion.h1>
       <motion.p
-        className="mt-4 text-xl text-gray-600"
+        className="mt-4 container text-xl text-center text-gray-600"
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.1 }}

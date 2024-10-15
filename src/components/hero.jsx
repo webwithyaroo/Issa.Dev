@@ -34,7 +34,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="min-h-[80vh] relative z-10 text-white pt-10 max-[500px]:pt-20 flex flex-col h-full justify-between">
+    <div className="min-h-[80vh] max-sm:h-[calc(100dvh - 80px)] relative z-10 text-white pt-10 max-[500px]:pt-[70px] flex flex-col  justify-between ">
       <div>
         <div className="container h-fit overflow-hidden">
           <motion.h1

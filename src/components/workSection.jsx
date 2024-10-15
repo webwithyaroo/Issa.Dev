@@ -64,7 +64,7 @@ const WorkSection = () => {
         }}
         ref={targetRef}
         transition={{ duration: 2, ease: "linear" }}
-        className="bg-white mt-14  relative mix-blend-difference flex items-center pb-20 flex-col mx-[3vw] rounded-t-full "
+        className="bg-white mt-14  relative mix-blend-difference flex items-center pb-20 flex-col  sm:rounded-t-full "
       >
         <div className="absolute top-3  max-md:top-[10px] translate-y-[-100%] decoStyles bg-white w-20 h-16   rounded-t-full flex items-center justify-center ">
           <FaArrowUp className="size-10 relative z-10 border-2 opacity-20 rotate-[180deg] mt-4 rounded-full p-2" />
