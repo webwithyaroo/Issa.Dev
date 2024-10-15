@@ -85,7 +85,7 @@ const Header = () => {
           </motion.h1>
         </div>
       </motion.div>
-      <div className="container  z-50 py-4 fixed top-0 left-0 right-0  flex items-center justify-between">
+      <div className="container z-50 py-4 fixed top-0 left-0 right-0  flex items-center justify-between">
         <a
           href="/"
           className=" flex  justify-center items-center   relative z-50 font-bold  text-xl md:text-xl lg:text-2xl"

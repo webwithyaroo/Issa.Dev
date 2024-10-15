@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import LeniScroll from "./components/lenis";
 import About from "./pages/about/about";
 import Home from "./pages/home/home";
