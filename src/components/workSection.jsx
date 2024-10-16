@@ -511,7 +511,10 @@ function MyProjects() {
           creativity needed to take your project to the next level.
         </motion.h1>
 
-        <button className="flex shrink-0 cursor-pointer mx-auto mt-10 items-center justify-center gap-x-4 rounded-full  ring-1 pr-6 ring-gray ">
+        <a
+          href="/contact"
+          className="flex shrink-0 cursor-pointer mx-auto mt-10 items-center justify-center gap-x-4 rounded-full  ring-1 pr-6 ring-gray w-fit"
+        >
           <div className="flex size-12 m-[2px]   shrink-0 items-center justify-center overflow-hidden rounded-full  ">
             <video autoPlay loop src="gesture.mp4 " muted>
               <track
@@ -523,7 +526,7 @@ function MyProjects() {
             </video>
           </div>
           <AnimatedLink title={"Let's Talk"} className={"text-white blg"} />
-        </button>
+        </a>
       </div>
     </section>
   );
