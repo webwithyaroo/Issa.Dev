@@ -34,7 +34,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="min-h-[80vh] max-sm:h-[calc(100dvh - 80px)] relative z-10 text-white pt-10 max-[500px]:pt-[70px] flex flex-col  justify-between ">
+    <div className="sm:h-[100vdh] max-sm:h-[calc(100dvh - 80px)] relative z-10 text-white pt-10 max-[500px]:pt-[70px] flex flex-col  justify-between ">
       <div>
         <div className="container h-fit overflow-hidden">
           <motion.h1
@@ -54,6 +54,63 @@ const Hero = () => {
           </motion.h1>
         </div>
 
+        {/* hero paragraph 1 */}
+        <div className="min-[500px]:hidden mt-5 container">
+          <p className=" overflow-hidden">
+            <motion.p
+              initial={{ translateY: 20 }}
+              whileInView={{ translateY: 0 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
+              viewport={{ once: true }}
+              className="text-xl max-w-64 leading-[0.8] overflow-hidden  blg flex max-[500px]:mt-3 justify-between items-start text-gray gap-2"
+            >
+              Empowering brands with
+              <FaArrowRight className="-rotate-45 flex-shrink-0 text-white" />
+            </motion.p>
+          </p>
+          <p className=" overflow-hidden">
+            <motion.p
+              initial={{ translateY: 15 }}
+              animate={{ translateY: 0 }}
+              transition={{ duration: 0.5, delay: 1 }}
+              viewport={{ once: true }}
+              className="text-xl max-w-64 blg leading-[0.8] mt-1  overflow-hidden max-[500px]:mt-2  text-gray"
+            >
+              visually stunning and
+            </motion.p>
+          </p>
+          <p className=" overflow-hidden">
+            <motion.p
+              initial={{ translateY: 15 }}
+              whileInView={{ translateY: 0 }}
+              transition={{ duration: 0.5, delay: 1.1 }}
+              viewport={{ once: true }}
+              className="text-xl max-w-64 blg leading-[0.8] mt-2 overflow-hidden max-[500px]:mt-3  text-gray"
+            >
+              functional web
+            </motion.p>
+          </p>
+          <p className=" overflow-hidden">
+            <motion.p
+              initial={{ translateY: 15 }}
+              whileInView={{ translateY: 0 }}
+              transition={{ duration: 0.5, delay: 1.2 }}
+              viewport={{ once: true }}
+              className="text-xl max-w-64 blg leading-[0.8] mt-2 overflow-hidden max-[500px]:mt-3  text-gray"
+            >
+              applications.
+            </motion.p>
+          </p>
+
+          <motion.button
+            whileTap={{ scale: 0.9 }}
+            transition={{ ease: "easeInOut", duration: 0.3 }}
+            className="bg-blue-500 px-10 mt-8  py-3  flex items-center justify-between gap-x-2 group rounded-full"
+          >
+            <a href="/contact">Let's Sync</a>
+            <FaArrowRight className="-rotate-45 group-hover:rotate-0 transition-all duration-500 group-hover:translate-x-2" />
+          </motion.button>
+        </div>
         <motion.div ref={targetRef} className="relative sm:container">
           {/* Apply the animated height to the video container */}
           <motion.div
@@ -84,7 +141,9 @@ const Hero = () => {
       </div>
 
       <div className="capitalize container text-4xl font-light md:text-5xl lg:text-6xl flex max-[500px]:flex-col justify-between max-[500px]:items-start gap-4 items-center mt-20 max-sm:mb-2">
-        <div>
+        {/* Hero paragraph text */}
+
+        <div className="max-[500px]:hidden">
           <p className=" overflow-hidden">
             <motion.p
               initial={{ translateY: 20 }}
@@ -132,7 +191,7 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className=" max-sm:pb-10 ">
+        <div className=" max-sm:pb-10 max-[500px]:hidden ">
           <motion.h1
             initial={{ opacity: 0, translateX: 20 }}
             whileInView={{
@@ -158,9 +217,10 @@ const Hero = () => {
             <motion.img
               initial={{ width: 0 }}
               whileInView={{ width: "auto" }}
-              transition={{ duration: 0.5, delay: 1.9, ease: "easeInOut" }}
+              transition={{ duration: 0.5, delay: 1.5, ease: "easeInOut" }}
               src="stroke.svg"
               alt=""
+              viewport={{ once: true }}
               className="align-bottom w-20 mr-2"
             />
             dev.

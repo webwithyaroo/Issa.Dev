@@ -85,6 +85,7 @@ const Header = () => {
           </motion.h1>
         </div>
       </motion.div>
+      {/* Logo  */}
       <div className="container z-50 py-4 fixed top-0 left-0 right-0  flex items-center justify-between">
         <a
           href="/"
@@ -115,180 +116,221 @@ const Header = () => {
             </motion.h1>
           </div>
         </a>
-        <div className="flex items-center gap-x-10  blg">
-          <motion.button
-            onClick={handleOpenFunction}
-            className=" menu-button rounded-full group  border-gray  z-50 size-12 lg:size-20 flex items-center justify-center flex-col bg-blue-500 transition-all duration-500 ease-in-out"
-          >
-            <img
-              src="menu.svg"
-              alt=""
-              className="w-6 group-hover:translate-y-1  transition-all duration-100 ease-out group-hover:opacity-0  "
-            />
-            <img
-              src="stroke.svg"
-              alt=""
-              className="w-6 group-hover:h-[2px] bg-white opacity-0 group-hover:-translate-y-1 group-hover:opacity-100 transition-all duration-300 ease-out"
-            />
-          </motion.button>
+        {/* CTA button */}
 
-          <motion.div
-            ref={menuRef}
-            initial={{ translateX: 0 }}
-            animate={{
-              translateX: opened ? 0 : "100%",
-            }}
-            className="fixed top-0 right-0 z-30  bg-white h-full transition-all duration-700 ease-out overflow-hidden px-10 lg:pl-20 flex items-center justify-center translate-x-full xl:[50%] md:w-[75%] w-full"
-          >
-            <div
-              className="flex items-center justify-between 
-             min-[405px]:flex-col w-full"
-            >
-              <div className=" grid grid-cols-2  justify-between items-center  w-full mb-10 max-[405px]:hidden">
-                <motion.p
-                  initial={{ opacity: 0, translateX: 25 }}
-                  whileInView={{ opacity: 1, translateX: 0 }}
-                  transition={{ ease: easeOut, duration: 0.5 }}
-                  className="text-gray-300"
-                >
-                  Social media
-                </motion.p>
-                <motion.p
-                  initial={{ opacity: 0, translateX: 25 }}
-                  whileInView={{ opacity: 1, translateX: 0 }}
-                  transition={{ ease: easeOut, duration: 0.5 }}
-                  className="text-gray-300 blg  "
-                >
-                  Menu
-                </motion.p>
-              </div>
-              <div className="grid grid-cols-2  max-[405px]:grid-cols-1 w-full items-center justify-between max-[405px]:grid">
-                <div>
-                  <ul className="text-black blg max-[400px]:absolute top-24 flex flex-col max-w-fit gap-y-1">
-                    <motion.li
-                      initial={{ opacity: 0, translateX: 25 }}
-                      whileInView={{ opacity: 1, translateX: 0 }}
-                      transition={{ ease: easeOut, duration: 0.5 }}
-                      className="hover:text-blue-500 transition-all duration-300 ease-out  "
-                    >
-                      <a href="https://www.linkedin.com/in/issa-soliu-ridollahi-3ab69129b/">
-                        <AnimatedLink title={"LinkedIn"} />
-                      </a>
-                    </motion.li>
-                    <motion.li
-                      initial={{ opacity: 0, translateX: 25 }}
-                      whileInView={{ opacity: 1, translateX: 0 }}
-                      transition={{ ease: easeOut, duration: 0.5, delay: 0.2 }}
-                      className="hover:text-blue-500 transition-all duration-300 ease-out"
-                    >
-                      <a href="https://www.instagram.com/webwithyaroo/">
-                        <AnimatedLink title={"Instagram"} />
-                      </a>
-                    </motion.li>
-
-                    <motion.li
-                      initial={{ opacity: 0, translateX: 25 }}
-                      whileInView={{ opacity: 1, translateX: 0 }}
-                      transition={{ ease: easeOut, duration: 0.5, delay: 0.4 }}
-                      className="hover:text-blue-500 transition-all duration-300 ease-out"
-                    >
-                      <a href="https://x.com/webwithyaroo">
-                        <AnimatedLink title={"Twitter"} />
-                      </a>
-                    </motion.li>
-                    <motion.li
-                      initial={{ opacity: 0, translateX: 25 }}
-                      whileInView={{ opacity: 1, translateX: 0 }}
-                      transition={{ ease: easeOut, duration: 0.5, delay: 0.6 }}
-                      className="hover:text-blue-500 transition-all duration-300 ease-out"
-                    >
-                      <a href="https://github.com/webwithyaroo">
-                        <AnimatedLink title={"GitHub"} />
-                      </a>
-                    </motion.li>
-                  </ul>
-                </div>
-                <div>
-                  <ul className="md:text-4xl lg:text-5xl text-3xl blg text-black cursor-pointer gap-2 flex flex-col ">
-                    <motion.li className="flex hover:text-blue-500 transition-all duration-300 ease-out group">
-                      <p className="group-hover:translate-x-2 transition-all duration-300 ease-out group ">
-                        <a href={"/about"}> What we do</a>
-                      </p>{" "}
-                      <FaArrowRight className="rotate-45 opacity-50 ml-2 group-hover:rotate-0 group-hover:translate-x-2 transition-all duration-300 ease-out group max-[500px]:hidden" />
-                    </motion.li>
-                    <motion.li
-                      initial={{ opacity: 0, translateX: 25 }}
-                      whileInView={{ opacity: 1, translateX: 0 }}
-                      transition={{ ease: easeOut, duration: 0.5, delay: 0.2 }}
-                      className="flex hover:text-blue-500 transition-all duration-300 ease-out group"
-                    >
-                      <a
-                        href="/portfolio"
-                        className="group-hover:translate-x-2 transition-all duration-300 ease-out group "
-                      >
-                        Portfolio
-                      </a>{" "}
-                      <FaArrowRight className="rotate-45 opacity-50 ml-2 group-hover:rotate-0 group-hover:translate-x-2 transition-all duration-300 ease-out group max-[500px]:hidden" />
-                    </motion.li>
-                    <motion.li
-                      initial={{ opacity: 0, translateX: 25 }}
-                      whileInView={{ opacity: 1, translateX: 0 }}
-                      transition={{ ease: easeOut, duration: 0.5, delay: 0.4 }}
-                      className="flex hover:text-blue-500 transition-all duration-300 ease-out group"
-                    >
-                      <p className="group-hover:translate-x-2 transition-all duration-300 ease-out group ">
-                        <a href={"/contact"}> Let's Talk</a>
-                      </p>{" "}
-                      <FaArrowRight className="rotate-45 opacity-50 ml-2 group-hover:rotate-0 group-hover:translate-x-2 transition-all duration-300 ease-out group max-[500px]:hidden" />
-                    </motion.li>
-                  </ul>
-                </div>
-              </div>
-              <div className="text-black absolute blg bottom-5 left-10 lg:left-20">
-                <motion.p
-                  initial={{ opacity: 0, translateX: 25 }}
-                  whileInView={{ opacity: 1, translateX: 0 }}
-                  transition={{ ease: easeOut, duration: 0.5, delay: 0.3 }}
-                  className="opacity-50 pb-2 text-xl"
-                >
-                  Get in touch
-                </motion.p>
-                <motion.p
-                  initial={{ opacity: 0, translateX: 25 }}
-                  whileInView={{ opacity: 1, translateX: 0 }}
-                  transition={{ ease: easeOut, duration: 0.5, delay: 0.4 }}
-                  className="hover:text-blue-500 transition-all duration-300 ease-out"
-                >
-                  <a href="mailto:olawaleridollahi@gmail.com">
-                    <AnimatedLink title={"Issa.dev@gmail.com"} />
-                  </a>
-                </motion.p>
-                <motion.p
-                  initial={{ opacity: 0, translateX: 25 }}
-                  whileInView={{ opacity: 1, translateX: 0 }}
-                  transition={{ ease: easeOut, duration: 0.5, delay: 0.5 }}
-                  className="border-b-[2px] mt-2 border-black border-opacity-50 max-w-fit"
-                >
-                  <a
-                    href="tel:+2347036172918"
-                    className="hover:text-primary  pb-1  "
-                  >
-                    <AnimatedLink title="+234 (070) 36172918" />
-                  </a>
-                </motion.p>
-              </div>
+        <div className="flex items-center justify-between gap-x-10">
+          <button className="flex max-[500px]:hidden shrink-0 cursor-pointer mx-auto  items-center justify-center gap-x-2 rounded-full  ring-1 pr-5 ring-gray ">
+            <div className="flex size-12 m-[2px]   shrink-0 items-center justify-center overflow-hidden rounded-full  ">
+              <video autoPlay loop src="gesture.mp4 " muted>
+                <track
+                  default
+                  kind="captions"
+                  label="English captions"
+                  src="captions.vtt"
+                />
+              </video>
             </div>
-          </motion.div>
-          <motion.div
-            initial={{ translateX: "-120%" }}
-            animate={{ translateX: opened ? "0" : "-120%" }}
-            style={{ opacity: opened ? "1" : 0 }}
-            transition={{
-              duration: 0.5,
-              ease: "linear",
-            }}
-            className="fixed inset-0 bg-[#03030357] duration-300 h-full transition-all  ease-linear "
-          ></motion.div>
+            <AnimatedLink
+              title={"Let's Talk"}
+              className={"text-blue-500 blg"}
+            />
+          </button>
+          {/* menu icon */}
+          <div className="flex items-center gap-x-10  blg">
+            <motion.button
+              onClick={handleOpenFunction}
+              className=" menu-button rounded-full group  border-gray  z-50 size-12 lg:size-20 flex items-center justify-center flex-col bg-blue-500 transition-all duration-500 ease-in-out"
+            >
+              <img
+                src="menu.svg"
+                alt=""
+                className="w-6 group-hover:translate-y-1  transition-all duration-100 ease-out group-hover:opacity-0  "
+              />
+              <img
+                src="stroke.svg"
+                alt=""
+                className="w-6 group-hover:h-[2px] bg-white opacity-0 group-hover:-translate-y-1 group-hover:opacity-100 transition-all duration-300 ease-out"
+              />
+            </motion.button>
+
+            <motion.div
+              ref={menuRef}
+              initial={{ translateX: 0 }}
+              animate={{
+                translateX: opened ? 0 : "100%",
+              }}
+              className="fixed top-0 right-0 z-30  bg-white h-full transition-all duration-700 ease-out overflow-hidden px-10 lg:pl-20 flex items-center justify-center translate-x-full xl:[50%] md:w-[75%] w-full"
+            >
+              <div
+                className="flex items-center justify-between 
+             min-[405px]:flex-col w-full"
+              >
+                <div className=" grid grid-cols-2  justify-between items-center  w-full mb-10 max-[405px]:hidden">
+                  <motion.p
+                    initial={{ opacity: 0, translateX: 25 }}
+                    whileInView={{ opacity: 1, translateX: 0 }}
+                    transition={{ ease: easeOut, duration: 0.5 }}
+                    className="text-gray-300"
+                  >
+                    Social media
+                  </motion.p>
+                  <motion.p
+                    initial={{ opacity: 0, translateX: 25 }}
+                    whileInView={{ opacity: 1, translateX: 0 }}
+                    transition={{ ease: easeOut, duration: 0.5 }}
+                    className="text-gray-300 blg  "
+                  >
+                    Menu
+                  </motion.p>
+                </div>
+                <div className="grid grid-cols-2  max-[405px]:grid-cols-1 w-full items-center justify-between max-[405px]:grid">
+                  <div>
+                    <ul className="text-black blg max-[400px]:absolute top-24 flex flex-col max-w-fit gap-y-1">
+                      <motion.li
+                        initial={{ opacity: 0, translateX: 25 }}
+                        whileInView={{ opacity: 1, translateX: 0 }}
+                        transition={{ ease: easeOut, duration: 0.5 }}
+                        className="hover:text-blue-500 transition-all duration-300 ease-out  "
+                      >
+                        <a href="https://www.linkedin.com/in/issa-soliu-ridollahi-3ab69129b/">
+                          <AnimatedLink title={"LinkedIn"} />
+                        </a>
+                      </motion.li>
+                      <motion.li
+                        initial={{ opacity: 0, translateX: 25 }}
+                        whileInView={{ opacity: 1, translateX: 0 }}
+                        transition={{
+                          ease: easeOut,
+                          duration: 0.5,
+                          delay: 0.2,
+                        }}
+                        className="hover:text-blue-500 transition-all duration-300 ease-out"
+                      >
+                        <a href="https://www.instagram.com/webwithyaroo/">
+                          <AnimatedLink title={"Instagram"} />
+                        </a>
+                      </motion.li>
+
+                      <motion.li
+                        initial={{ opacity: 0, translateX: 25 }}
+                        whileInView={{ opacity: 1, translateX: 0 }}
+                        transition={{
+                          ease: easeOut,
+                          duration: 0.5,
+                          delay: 0.4,
+                        }}
+                        className="hover:text-blue-500 transition-all duration-300 ease-out"
+                      >
+                        <a href="https://x.com/webwithyaroo">
+                          <AnimatedLink title={"Twitter"} />
+                        </a>
+                      </motion.li>
+                      <motion.li
+                        initial={{ opacity: 0, translateX: 25 }}
+                        whileInView={{ opacity: 1, translateX: 0 }}
+                        transition={{
+                          ease: easeOut,
+                          duration: 0.5,
+                          delay: 0.6,
+                        }}
+                        className="hover:text-blue-500 transition-all duration-300 ease-out"
+                      >
+                        <a href="https://github.com/webwithyaroo">
+                          <AnimatedLink title={"GitHub"} />
+                        </a>
+                      </motion.li>
+                    </ul>
+                  </div>
+                  <div>
+                    <ul className="md:text-4xl lg:text-5xl text-3xl blg text-black cursor-pointer gap-2 flex flex-col ">
+                      <motion.li className="flex hover:text-blue-500 transition-all duration-300 ease-out group">
+                        <p className="group-hover:translate-x-2 transition-all duration-300 ease-out group ">
+                          <a href={"/about"}> What we do</a>
+                        </p>{" "}
+                        <FaArrowRight className="rotate-45 opacity-50 ml-2 group-hover:rotate-0 group-hover:translate-x-2 transition-all duration-300 ease-out group max-[500px]:hidden" />
+                      </motion.li>
+                      <motion.li
+                        initial={{ opacity: 0, translateX: 25 }}
+                        whileInView={{ opacity: 1, translateX: 0 }}
+                        transition={{
+                          ease: easeOut,
+                          duration: 0.5,
+                          delay: 0.2,
+                        }}
+                        className="flex hover:text-blue-500 transition-all duration-300 ease-out group"
+                      >
+                        <a
+                          href="/portfolio"
+                          className="group-hover:translate-x-2 transition-all duration-300 ease-out group "
+                        >
+                          Portfolio
+                        </a>{" "}
+                        <FaArrowRight className="rotate-45 opacity-50 ml-2 group-hover:rotate-0 group-hover:translate-x-2 transition-all duration-300 ease-out group max-[500px]:hidden" />
+                      </motion.li>
+                      <motion.li
+                        initial={{ opacity: 0, translateX: 25 }}
+                        whileInView={{ opacity: 1, translateX: 0 }}
+                        transition={{
+                          ease: easeOut,
+                          duration: 0.5,
+                          delay: 0.4,
+                        }}
+                        className="flex hover:text-blue-500 transition-all duration-300 ease-out group"
+                      >
+                        <p className="group-hover:translate-x-2 transition-all duration-300 ease-out group ">
+                          <a href={"/contact"}> Let's Talk</a>
+                        </p>{" "}
+                        <FaArrowRight className="rotate-45 opacity-50 ml-2 group-hover:rotate-0 group-hover:translate-x-2 transition-all duration-300 ease-out group max-[500px]:hidden" />
+                      </motion.li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="text-black absolute blg bottom-5 left-10 lg:left-20">
+                  <motion.p
+                    initial={{ opacity: 0, translateX: 25 }}
+                    whileInView={{ opacity: 1, translateX: 0 }}
+                    transition={{ ease: easeOut, duration: 0.5, delay: 0.3 }}
+                    className="opacity-50 pb-2 text-xl"
+                  >
+                    Get in touch
+                  </motion.p>
+                  <motion.p
+                    initial={{ opacity: 0, translateX: 25 }}
+                    whileInView={{ opacity: 1, translateX: 0 }}
+                    transition={{ ease: easeOut, duration: 0.5, delay: 0.4 }}
+                    className="hover:text-blue-500 transition-all duration-300 ease-out"
+                  >
+                    <a href="mailto:olawaleridollahi@gmail.com">
+                      <AnimatedLink title={"Issa.dev@gmail.com"} />
+                    </a>
+                  </motion.p>
+                  <motion.p
+                    initial={{ opacity: 0, translateX: 25 }}
+                    whileInView={{ opacity: 1, translateX: 0 }}
+                    transition={{ ease: easeOut, duration: 0.5, delay: 0.5 }}
+                    className="border-b-[2px] mt-2 border-black border-opacity-50 max-w-fit"
+                  >
+                    <a
+                      href="tel:+2347036172918"
+                      className="hover:text-primary  pb-1  "
+                    >
+                      <AnimatedLink title="+234 (070) 36172918" />
+                    </a>
+                  </motion.p>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ translateX: "-120%" }}
+              animate={{ translateX: opened ? "0" : "-120%" }}
+              style={{ opacity: opened ? "1" : 0 }}
+              transition={{
+                duration: 0.5,
+                ease: "linear",
+              }}
+              className="fixed inset-0 bg-[#03030357] duration-300 h-full transition-all  ease-linear "
+            ></motion.div>
+          </div>
         </div>
       </div>
     </section>
