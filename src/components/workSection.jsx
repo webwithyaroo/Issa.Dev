@@ -146,7 +146,7 @@ function ScrollingText() {
 }
 
 function MyProjects() {
-  const [opened, setOpened] = useState(0);
+  const [opened, setOpened] = useState(5);
 
   function handleAnimation(num) {
     if (opened === num) {
@@ -173,6 +173,253 @@ function MyProjects() {
 
         {/* Body of the table */}
         <tbody className="text-white">
+          {/* yarex project */}
+          <motion.tr
+            initial={{ opacity: 0, translateY: 25 }}
+            whileInView={{ opacity: 1, translateY: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            transformOrigin="top center"
+            onClick={() => handleAnimation(5)}
+            className="border-b-[1px] border-white text-start relative group isolate overflow-hidden cursor-pointer"
+          >
+            <td className="py-3 relative z-50 group-hover:text-black transition-all sm:group-hover:translate-x-4 group-hover:translate-x-2 duration-300 ease-out">
+              Yarex - Inspired by Zentry
+            </td>
+            <td className="max-sm:hidden  relative z-50 group-hover:text-black">
+              Design & Development
+            </td>
+            <td className="max-sm:hidden  relative z-50 group-hover:text-black">
+              Yarex
+            </td>
+            <td className="relative z-50  group-hover:text-black">2024</td>
+
+            <div className="absolute inset-0 group-hover:h-full h-0 transition-all duration-300 ease-out bg-white w-full -z-10"></div>
+          </motion.tr>
+          <tr>
+            <td colSpan="4">
+              <AnimatePresence>
+                {opened === 5 && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }} // Adjust height based on your content
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.5, ease: "easeInOut" }} // Optional easing
+                    className=" overflow-hidden w-[95%] mx-auto"
+                  >
+                    <p className="blg mt-4 text-balance text-2xl md:text-3xl lg:text-4xl max-w-[700px]">
+                      Yarex is a cutting-edge application I developed, inspired
+                      by the functionalities of Zentry. This app redefines user
+                      convenience by offering seamless access management and
+                      enhanced security features. Yarex showcases my ability to
+                      build scalable, interactive, and user-centric
+                      applications.
+                    </p>
+                    <Link
+                      to={"https://yarex.vercel.app/"}
+                      className="flex items-center px-6 py-3 my-5 bg-white w-fit rounded-full"
+                    >
+                      <AnimatedLink
+                        title={"See Website"}
+                        className={"text-black"}
+                      />
+                    </Link>
+                    <ul className="blg">
+                      <li className="list-decimal list-inside">React.js</li>
+                      <li className="list-decimal list-inside">
+                        Lenis Smooth Scroll
+                      </li>
+                      <li className="list-decimal list-inside">
+                        Framer Motion and GSAP for advanced transitions
+                      </li>
+                      <li className="list-decimal list-inside">Next JS</li>
+                      <li className="list-decimal list-inside">Tailwind CSS</li>
+                    </ul>
+
+                    <div className="flex flex-wrap mx-auto max-w-[700px] items-center  mt-10 justify-center">
+                      <motion.img
+                        initial={{ filter: "blur(5px)" }}
+                        whileInView={{ filter: "blur(0px)", opacity: 1 }}
+                        transition={{
+                          ease: "easeInOut",
+                          duration: 0.3,
+                          delay: 0.3,
+                        }}
+                        viewport={{ once: true }}
+                        className="object-contain "
+                        src="/image/yarexone.png"
+                        alt="A website home page"
+                      />
+                      <motion.img
+                        initial={{ filter: "blur(5px)" }}
+                        whileInView={{ filter: "blur(0px)", opacity: 1 }}
+                        transition={{
+                          ease: "easeInOut",
+                          duration: 0.3,
+                          delay: 0.3,
+                        }}
+                        viewport={{ once: true }}
+                        className="object-contain "
+                        src="/image/yarextwo.png"
+                        alt="A website testimony"
+                      />
+                      <motion.img
+                        initial={{ filter: "blur(5px)" }}
+                        whileInView={{ filter: "blur(0px)", opacity: 1 }}
+                        transition={{
+                          ease: "easeInOut",
+                          duration: 0.3,
+                          delay: 0.3,
+                        }}
+                        viewport={{ once: true }}
+                        className="object-contain "
+                        src="/image/yarexthree.png"
+                        alt="A website testimony"
+                      />
+                      <motion.img
+                        initial={{ filter: "blur(5px)" }}
+                        whileInView={{ filter: "blur(0px)", opacity: 1 }}
+                        transition={{
+                          ease: "easeInOut",
+                          duration: 0.3,
+                          delay: 0.3,
+                        }}
+                        viewport={{ once: true }}
+                        className="object-contain "
+                        src="/image/yarex6.png"
+                        alt="A website footer"
+                      />
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </td>
+          </tr>
+          {/* proray project */}
+          <motion.tr
+            initial={{ opacity: 0, translateY: 25 }}
+            whileInView={{ opacity: 1, translateY: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            transformOrigin="top center"
+            onClick={() => handleAnimation(4)}
+            className="border-b-[1px] border-white text-start relative group isolate overflow-hidden cursor-pointer"
+          >
+            <td className="py-3 relative z-50 group-hover:text-black transition-all sm:group-hover:translate-x-4 group-hover:translate-x-2 duration-300 ease-out">
+              Proray website developement
+            </td>
+            <td className="max-sm:hidden  relative z-50 group-hover:text-black">
+              Development
+            </td>
+            <td className="max-sm:hidden  relative z-50 group-hover:text-black">
+              proray solutions
+            </td>
+            <td className="relative z-50  group-hover:text-black">2024</td>
+
+            <div className="absolute inset-0 group-hover:h-full h-0 transition-all duration-300 ease-out bg-white w-full -z-10"></div>
+          </motion.tr>
+          <tr>
+            <td colSpan="4">
+              <AnimatePresence>
+                {opened === 4 && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }} // Adjust height based on your content
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.5, ease: "easeInOut" }} // Optional easing
+                    className=" overflow-hidden w-[95%] mx-auto"
+                  >
+                    <p className="blg mt-4 text-balance text-2xl md:text-3xl lg:text-4xl max-w-[700px]">
+                      ProRay Solutions Ltd. is a modern and professional
+                      business website I developed to showcase the company's
+                      services and expertise. The website delivers a seamless
+                      user experience while reflecting the company’s brand
+                      identity through clean design, interactive features, and
+                      responsive layouts
+                    </p>
+                    <Link
+                      to={"https://proraysolutionsltd.com/"}
+                      className="flex items-center px-6 py-3 my-5 bg-white w-fit rounded-full"
+                    >
+                      <AnimatedLink
+                        title={"See Website"}
+                        className={"text-black"}
+                      />
+                    </Link>
+                    <ul className="blg">
+                      <li className="list-decimal list-inside">
+                        Full website Development
+                      </li>
+                      <li className="list-decimal list-inside">
+                        Lenis Smooth Scroll
+                      </li>
+                      <li className="list-decimal list-inside">
+                        Framer motion for animations
+                      </li>
+                      <li className="list-decimal list-inside">Next JS</li>
+                      <li className="list-decimal list-inside">Tailwind CSS</li>
+                    </ul>
+
+                    <div className="flex flex-wrap mx-auto max-w-[700px] items-center  mt-10 justify-center">
+                      <motion.img
+                        initial={{ filter: "blur(5px)" }}
+                        whileInView={{ filter: "blur(0px)", opacity: 1 }}
+                        transition={{
+                          ease: "easeInOut",
+                          duration: 0.3,
+                          delay: 0.3,
+                        }}
+                        viewport={{ once: true }}
+                        className="object-contain "
+                        src="/image/proray1.png"
+                        alt="A website home page"
+                      />
+                      <motion.img
+                        initial={{ filter: "blur(5px)" }}
+                        whileInView={{ filter: "blur(0px)", opacity: 1 }}
+                        transition={{
+                          ease: "easeInOut",
+                          duration: 0.3,
+                          delay: 0.3,
+                        }}
+                        viewport={{ once: true }}
+                        className="object-contain "
+                        src="/image/proraybanner.png"
+                        alt="A website testimony"
+                      />
+                      <motion.img
+                        initial={{ filter: "blur(5px)" }}
+                        whileInView={{ filter: "blur(0px)", opacity: 1 }}
+                        transition={{
+                          ease: "easeInOut",
+                          duration: 0.3,
+                          delay: 0.3,
+                        }}
+                        viewport={{ once: true }}
+                        className="object-contain "
+                        src="/image/prorayabout.png"
+                        alt="A website testimony"
+                      />
+                      <motion.img
+                        initial={{ filter: "blur(5px)" }}
+                        whileInView={{ filter: "blur(0px)", opacity: 1 }}
+                        transition={{
+                          ease: "easeInOut",
+                          duration: 0.3,
+                          delay: 0.3,
+                        }}
+                        viewport={{ once: true }}
+                        className="object-contain "
+                        src="/image/prorayfooter.png"
+                        alt="A website footer"
+                      />
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </td>
+          </tr>
+
           {/* First Project */}
           <motion.tr
             initial={{ opacity: 0, translateY: 25 }}
@@ -181,7 +428,7 @@ function MyProjects() {
             transition={{ duration: 0.3, ease: "easeOut" }}
             transformOrigin="top center"
             onClick={() => handleAnimation(1)}
-            className="border-b-[1px] border-white text-start relative group isolate overflow-hidden"
+            className="border-b-[1px] border-white text-start relative group isolate overflow-hidden cursor-pointer"
           >
             <td className="py-3 relative z-50 group-hover:text-black transition-all sm:group-hover:translate-x-4 group-hover:translate-x-2 duration-300 ease-out">
               Sparkr Digitals Landing Page
@@ -284,7 +531,7 @@ function MyProjects() {
             transition={{ duration: 0.3, delay: 0.3, ease: "easeOut" }}
             transformOrigin="top center"
             onClick={() => handleAnimation(2)}
-            className="text-start border-b-[1px] border-white relative group isolate overflow-hidden"
+            className="text-start border-b-[1px] border-white relative group isolate overflow-hidden cursor-pointer"
           >
             <td className="py-3 relative z-50 group-hover:text-black transition-all sm:group-hover:translate-x-4 group-hover:translate-x-2 duration-300 ease-out">
               SANAM: Frontend Collaboration
@@ -395,7 +642,7 @@ function MyProjects() {
             transition={{ duration: 0.3, delay: 0.5, ease: "easeOut" }}
             transformOrigin="top center"
             onClick={() => handleAnimation(3)}
-            className="text-start border-b-[1px] border-white relative group isolate overflow-hidden"
+            className="text-start border-b-[1px] border-white relative group isolate overflow-hidden cursor-pointer"
           >
             <td className="py-3 relative z-50 group-hover:text-black transition-all sm:group-hover:translate-x-4 group-hover:translate-x-2 duration-300 ease-out">
               HOMAKER: Ecommerce Presence
